@@ -31,20 +31,20 @@ namespace ProjectPRN.GUI
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.markToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.majorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,33 @@ namespace ProjectPRN.GUI
             this.systemToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.systemToolStripMenuItem.Text = "System";
             // 
+            // accountManagementToolStripMenuItem
+            // 
+            this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
+            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.accountManagementToolStripMenuItem.Text = "Account Management";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // categoriesToolStripMenuItem
             // 
             this.categoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -87,6 +114,36 @@ namespace ProjectPRN.GUI
             this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.categoriesToolStripMenuItem.Text = "Categories";
             // 
+            // studentToolStripMenuItem
+            // 
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.studentToolStripMenuItem.Text = "Student";
+            // 
+            // teacherToolStripMenuItem
+            // 
+            this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.teacherToolStripMenuItem.Text = "Teacher";
+            // 
+            // majorsToolStripMenuItem
+            // 
+            this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
+            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.majorsToolStripMenuItem.Text = "Majors";
+            // 
+            // subjectsToolStripMenuItem
+            // 
+            this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
+            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.subjectsToolStripMenuItem.Text = "Subjects";
+            // 
+            // exercisesToolStripMenuItem
+            // 
+            this.exercisesToolStripMenuItem.Name = "exercisesToolStripMenuItem";
+            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.exercisesToolStripMenuItem.Text = "Exercises";
+            // 
             // markToolStripMenuItem
             // 
             this.markToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -95,6 +152,12 @@ namespace ProjectPRN.GUI
             this.markToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.markToolStripMenuItem.Text = "Marks";
             this.markToolStripMenuItem.Click += new System.EventHandler(this.markToolStripMenuItem_Click);
+            // 
+            // studentMarksToolStripMenuItem
+            // 
+            this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
+            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
             // 
             // viewStudentToolStripMenuItem
             // 
@@ -107,66 +170,6 @@ namespace ProjectPRN.GUI
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // accountManagementToolStripMenuItem
-            // 
-            this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
-            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.accountManagementToolStripMenuItem.Text = "Account Management";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.changePasswordToolStripMenuItem.Text = "Change password";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // studentToolStripMenuItem
-            // 
-            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.studentToolStripMenuItem.Text = "Student";
-            // 
-            // teacherToolStripMenuItem
-            // 
-            this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
-            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.teacherToolStripMenuItem.Text = "Teacher";
-            // 
-            // majorsToolStripMenuItem
-            // 
-            this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
-            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.majorsToolStripMenuItem.Text = "Majors";
-            // 
-            // subjectsToolStripMenuItem
-            // 
-            this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
-            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.subjectsToolStripMenuItem.Text = "Subjects";
-            // 
-            // exercisesToolStripMenuItem
-            // 
-            this.exercisesToolStripMenuItem.Name = "exercisesToolStripMenuItem";
-            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exercisesToolStripMenuItem.Text = "Exercises";
-            // 
-            // studentMarksToolStripMenuItem
-            // 
-            this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
-            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
             // 
             // panel1
             // 

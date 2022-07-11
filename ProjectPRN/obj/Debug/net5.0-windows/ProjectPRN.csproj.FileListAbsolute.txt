@@ -58,7 +58,6 @@ C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\bin\Debug\net5.0-windows\runtimes\u
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.csproj.AssemblyReference.cache
-C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.Form1.resources
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.csproj.GenerateResource.cache
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.AssemblyInfoInputs.cache
@@ -69,3 +68,7 @@ C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ref\ProjectPRN.dll
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.pdb
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.LoginGUI.resources
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.MainGUI.resources
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\bin\Debug\net5.0-windows\appsettings.json
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.ChangePasswordGUI.resources
