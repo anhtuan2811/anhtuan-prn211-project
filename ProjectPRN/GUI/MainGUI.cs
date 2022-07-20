@@ -24,7 +24,16 @@ namespace ProjectPRN.GUI
                 accountManagementToolStripMenuItem.Visible = false;
             }
         }
+        private void embed(Panel panel, Form f)
+        {
+            panel.Controls.Clear();
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            f.Show();
 
+            panel.Controls.Add(f);
+
+        }
         private void markToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -45,7 +54,13 @@ namespace ProjectPRN.GUI
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GUI.ChangePasswordGUI cpg = new ChangePasswordGUI();
-            cpg.Show();
+            embed(panel1, cpg);
+        }
+
+        private void accountManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.AccountGUI acg = new AccountGUI();
+            embed(panel1, acg);
         }
     }
 }

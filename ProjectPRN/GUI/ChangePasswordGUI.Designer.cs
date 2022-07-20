@@ -30,13 +30,13 @@ namespace ProjectPRN.GUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblRepassword = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtRepassword = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.txtRepassword = new System.Windows.Forms.TextBox();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblRepassword = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -45,10 +45,10 @@ namespace ProjectPRN.GUI
             // 
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.txtRepassword);
-            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.txtNewPassword);
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.lblRepassword);
-            this.groupBox1.Controls.Add(this.lblPassword);
+            this.groupBox1.Controls.Add(this.lblNewPassword);
             this.groupBox1.Controls.Add(this.lblUsername);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkOrange;
@@ -59,27 +59,38 @@ namespace ProjectPRN.GUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change password";
             // 
-            // lblUsername
+            // btnSave
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsername.Location = new System.Drawing.Point(54, 65);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(107, 24);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "UserName";
+            this.btnSave.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSave.Location = new System.Drawing.Point(289, 222);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblPassword
+            // txtRepassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPassword.Location = new System.Drawing.Point(54, 125);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(103, 24);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
+            this.txtRepassword.Location = new System.Drawing.Point(223, 175);
+            this.txtRepassword.Name = "txtRepassword";
+            this.txtRepassword.Size = new System.Drawing.Size(264, 27);
+            this.txtRepassword.TabIndex = 5;
+            // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.Location = new System.Drawing.Point(223, 125);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(264, 27);
+            this.txtNewPassword.TabIndex = 4;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(223, 62);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(264, 27);
+            this.txtUserName.TabIndex = 3;
             // 
             // lblRepassword
             // 
@@ -92,37 +103,27 @@ namespace ProjectPRN.GUI
             this.lblRepassword.TabIndex = 2;
             this.lblRepassword.Text = "Repassword";
             // 
-            // txtUserName
+            // lblNewPassword
             // 
-            this.txtUserName.Location = new System.Drawing.Point(223, 62);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(264, 27);
-            this.txtUserName.TabIndex = 3;
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNewPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNewPassword.Location = new System.Drawing.Point(54, 125);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(143, 24);
+            this.lblNewPassword.TabIndex = 1;
+            this.lblNewPassword.Text = "NewPassword";
             // 
-            // txtPassword
+            // lblUsername
             // 
-            this.txtPassword.Location = new System.Drawing.Point(223, 122);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(264, 27);
-            this.txtPassword.TabIndex = 4;
-            // 
-            // txtRepassword
-            // 
-            this.txtRepassword.Location = new System.Drawing.Point(223, 175);
-            this.txtRepassword.Name = "txtRepassword";
-            this.txtRepassword.Size = new System.Drawing.Size(264, 27);
-            this.txtRepassword.TabIndex = 5;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSave.Location = new System.Drawing.Point(289, 222);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUsername.Location = new System.Drawing.Point(54, 65);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(107, 24);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "UserName";
             // 
             // lblTitle
             // 
@@ -154,10 +155,10 @@ namespace ProjectPRN.GUI
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtRepassword;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblRepassword;
-        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblNewPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblTitle;

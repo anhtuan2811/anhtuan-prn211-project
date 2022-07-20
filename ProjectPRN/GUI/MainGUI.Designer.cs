@@ -80,6 +80,7 @@ namespace ProjectPRN.GUI
             this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
             this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.accountManagementToolStripMenuItem.Text = "Account Management";
+            this.accountManagementToolStripMenuItem.Click += new System.EventHandler(this.accountManagementToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -156,7 +157,7 @@ namespace ProjectPRN.GUI
             // studentMarksToolStripMenuItem
             // 
             this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
-            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
             // 
             // viewStudentToolStripMenuItem

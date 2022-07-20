@@ -30,7 +30,6 @@ namespace ProjectPRN.DataAccess
             adapter.Fill(dt);
             return dt;
         }
-
         public static int ExecuteSql(string sql, SqlParameter[] parameters)
         {
             SqlCommand command = new SqlCommand(sql, GetConnection());
@@ -39,6 +38,25 @@ namespace ProjectPRN.DataAccess
             int k = command.ExecuteNonQuery();
             command.Connection.Close();
             return k;
+        }
+        //Insert, Update, Delete
+        public static bool Update(SqlCommand cmd)
+        {
+            try
+            {
+                SqlConnection conn = GetConnection();
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
     }
 }
