@@ -127,6 +127,7 @@ namespace ProjectPRN.GUI
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
             this.teacherToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.teacherToolStripMenuItem.Text = "Teacher";
+            this.teacherToolStripMenuItem.Click += new System.EventHandler(this.teacherToolStripMenuItem_Click);
             // 
             // majorsToolStripMenuItem
             // 
@@ -158,7 +159,7 @@ namespace ProjectPRN.GUI
             // studentMarksToolStripMenuItem
             // 
             this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
-            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
             // 
             // viewStudentToolStripMenuItem

@@ -19,5 +19,8 @@
     <Compile Update="GUI\StudentGUI.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\TeacherGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

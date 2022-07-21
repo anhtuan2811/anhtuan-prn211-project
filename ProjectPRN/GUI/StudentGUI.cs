@@ -1,4 +1,5 @@
 ﻿using ProjectPRN.DataAccess;
+using ProjectPRN.DataTransfer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,110 @@ namespace ProjectPRN.GUI
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string studentID = txtStudentID.Text;
+                string studentName = txtName.Text;
+                DateTime DOB = dateTimePickerDOB.Value;
+                string gender = cboGender.SelectedValue.ToString();
+                string address = txtAddress.Text;
+                string classID = cboClassName.SelectedValue.ToString();
+                string email = txtEmail.Text;
+                if (String.IsNullOrEmpty(studentID) || String.IsNullOrEmpty(studentName))
+                {
+                    MessageBox.Show("id and name can not empty !");
+                    return;
+                }
+                else if (DAO.GetDataBySql("SELECT StudentID FROM Student WHERE StudentID LIKE '" + studentID + "'",null).Rows.Count != 0)
+                {
+                    MessageBox.Show("Student already exist");
+                    return;
+                }
+                else
+                {
+                    Student st = new Student
+                    {
+                        StudentID = studentID,
+                        StudentName = studentName,
+                        DOB = DOB,
+                        Gender = gender,
+                        Email = email,
+                        Address = address,
+                        ClassID = classID
+                    };
+                    StudentDAO.Insert(st);
+                    DataTable dt = StudentDAO.GetStudentByClassID(classID);
+                    dataGridView1.DataSource = dt;
+                }
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = txtStudentID.Text;
+            Student s = StudentDAO.GetStudentByID(id);
+            if (String.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Student id can not empty !");
+                return;
+            }
+            else if (DAO.GetDataBySql("SELECT StudentID FROM Student WHERE StudentID LIKE '" + id + "'",null).Rows.Count == 0)
+            {
+                MessageBox.Show("Student not found");
+                return;
+            }
+            else
+            {
+                StudentDAO.Delete(s);
+                DataTable dt = StudentDAO.GetStudentByClassID(cboClass.SelectedValue.ToString());
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string studentID = txtStudentID.Text;
+            string studentName = txtName.Text;
+            DateTime DOB = dateTimePickerDOB.Value;
+            string gender = cboGender.SelectedValue.ToString();
+            string address = txtAddress.Text;
+            string classID = cboClassName.SelectedValue.ToString();
+            string email = txtEmail.Text;
+
+            if (String.IsNullOrEmpty(studentID) || String.IsNullOrEmpty(studentName))
+            {
+                MessageBox.Show("Student id or name can not empty !");
+                return;
+            }
+            else if (DAO.GetDataBySql("SELECT StudentID FROM Student WHERE StudentID LIKE '" + studentID + "'",null).Rows.Count == 0)
+            {
+                MessageBox.Show("Student not found");
+                return;
+            }
+            else
+            {
+                Student st = new Student
+                {
+                    StudentID = studentID,
+                    StudentName = studentName,
+                    DOB = DOB,
+                    Gender = gender,
+                    Email = email,
+                    Address = address,
+                    ClassID = classID
+                };
+                StudentDAO.Update(st);
+                DataTable dt = StudentDAO.GetStudentByClassID(classID);
+                dataGridView1.DataSource = dt;
             }
         }
     }
