@@ -18,10 +18,7 @@ namespace ProjectPRN.GUI
         public AccountGUI()
         {
             InitializeComponent();
-            dataGridView1.DataSource = AccountDAO.GetAllAccount();
-            hide();
-            btnRemove.Enabled = false;
-            btnEdit.Enabled = false;
+           
         }
 
         private void hide()
@@ -43,6 +40,10 @@ namespace ProjectPRN.GUI
 
         private void AccountGUI_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = AccountDAO.GetAllAccount();
+            hide();
+            btnRemove.Enabled = false;
+            btnEdit.Enabled = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -111,8 +112,8 @@ namespace ProjectPRN.GUI
                             Username = txtUserName.Text,
                             Password = txtPassword.Text,
                             Name = txtName.Text,
-                            Gender = cboGender.SelectedValue.ToString(),
-                            Role = cboRole.SelectedValue.ToString()
+                            Gender = cboGender.SelectedItem.ToString(),
+                            Role = cboRole.SelectedItem.ToString()
                         };
                         AccountDAO.Insert(account);
                         btnAdd.Text = "Add";
@@ -146,8 +147,8 @@ namespace ProjectPRN.GUI
                         Username = txtUserName.Text,
                         Password = txtPassword.Text,
                         Name = txtName.Text,
-                        Gender = cboGender.SelectedValue.ToString(),
-                        Role = cboRole.SelectedValue.ToString()
+                        Gender = cboGender.SelectedItem.ToString(),
+                        Role = cboRole.SelectedItem.ToString()
                     };
                     AccountDAO.Update(account);
                     dataGridView1.DataSource = AccountDAO.GetAllAccount();

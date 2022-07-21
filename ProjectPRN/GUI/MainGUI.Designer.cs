@@ -165,6 +165,7 @@ namespace ProjectPRN.GUI
             this.viewStudentToolStripMenuItem.Name = "viewStudentToolStripMenuItem";
             this.viewStudentToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.viewStudentToolStripMenuItem.Text = "View Student";
+            this.viewStudentToolStripMenuItem.Click += new System.EventHandler(this.viewStudentToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

@@ -45,7 +45,7 @@ namespace ProjectPRN.DataAccess
             cmd.Parameters.AddWithValue("@Gender", account.Gender);
             cmd.Parameters.AddWithValue("@Role", account.Role);
             if (Update(cmd))
-                MessageBox.Show("Add new account failed!", "Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Add new account successful!", "Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 MessageBox.Show("Add new account failed!", "Add", MessageBoxButtons.OK, MessageBoxIcon.Error);

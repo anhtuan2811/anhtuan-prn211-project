@@ -80,6 +80,9 @@ namespace ProjectPRN.GUI
             // cboGender
             // 
             this.cboGender.FormattingEnabled = true;
+            this.cboGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cboGender.Location = new System.Drawing.Point(584, 93);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(109, 28);
@@ -88,6 +91,9 @@ namespace ProjectPRN.GUI
             // cboRole
             // 
             this.cboRole.FormattingEnabled = true;
+            this.cboRole.Items.AddRange(new object[] {
+            "Admin",
+            "Member"});
             this.cboRole.Location = new System.Drawing.Point(136, 115);
             this.cboRole.Name = "cboRole";
             this.cboRole.Size = new System.Drawing.Size(245, 28);
@@ -191,6 +197,7 @@ namespace ProjectPRN.GUI
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 357);
             this.dataGridView1.Name = "dataGridView1";

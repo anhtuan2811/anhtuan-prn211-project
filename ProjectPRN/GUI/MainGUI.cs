@@ -1,5 +1,4 @@
 ﻿using ProjectPRN.DataTransfer;
-using ProjectPRN.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,6 +60,12 @@ namespace ProjectPRN.GUI
         {
             GUI.AccountGUI acg = new AccountGUI();
             embed(panel1, acg);
+        }
+
+        private void viewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.SearchStudentGUI ssg = new SearchStudentGUI();
+            embed(panel1, ssg);
         }
     }
 }
