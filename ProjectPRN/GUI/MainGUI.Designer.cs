@@ -118,31 +118,32 @@ namespace ProjectPRN.GUI
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.studentToolStripMenuItem.Text = "Student";
+            this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // teacherToolStripMenuItem
             // 
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
-            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.teacherToolStripMenuItem.Text = "Teacher";
             // 
             // majorsToolStripMenuItem
             // 
             this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
-            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.majorsToolStripMenuItem.Text = "Majors";
             // 
             // subjectsToolStripMenuItem
             // 
             this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
-            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.subjectsToolStripMenuItem.Text = "Subjects";
             // 
             // exercisesToolStripMenuItem
             // 
             this.exercisesToolStripMenuItem.Name = "exercisesToolStripMenuItem";
-            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exercisesToolStripMenuItem.Text = "Exercises";
             // 
             // markToolStripMenuItem
@@ -157,7 +158,7 @@ namespace ProjectPRN.GUI
             // studentMarksToolStripMenuItem
             // 
             this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
-            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
             // 
             // viewStudentToolStripMenuItem

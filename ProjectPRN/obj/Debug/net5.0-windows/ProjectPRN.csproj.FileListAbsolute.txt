@@ -74,3 +74,4 @@ C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\bin\Debug\net5.0-windows\appsetting
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.ChangePasswordGUI.resources
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.AccountGUI.resources
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.SearchStudentGUI.resources
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.StudentGUI.resources

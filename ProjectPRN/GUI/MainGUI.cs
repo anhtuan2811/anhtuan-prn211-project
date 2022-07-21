@@ -67,5 +67,11 @@ namespace ProjectPRN.GUI
             GUI.SearchStudentGUI ssg = new SearchStudentGUI();
             embed(panel1, ssg);
         }
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.StudentGUI stg = new StudentGUI();
+            embed(panel1, stg);
+        }
     }
 }
