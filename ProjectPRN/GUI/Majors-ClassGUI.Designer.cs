@@ -45,7 +45,7 @@ namespace ProjectPRN.GUI
             this.btnDeleteMajors = new System.Windows.Forms.Button();
             this.btnDeleteClass = new System.Windows.Forms.Button();
             this.btnEditClass = new System.Windows.Forms.Button();
-            this.AddClass = new System.Windows.Forms.Button();
+            this.btnAddClass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -191,6 +191,7 @@ namespace ProjectPRN.GUI
             this.btnDeleteClass.TabIndex = 16;
             this.btnDeleteClass.Text = "Delete";
             this.btnDeleteClass.UseVisualStyleBackColor = true;
+            this.btnDeleteClass.Click += new System.EventHandler(this.btnDeleteClass_Click);
             // 
             // btnEditClass
             // 
@@ -200,15 +201,17 @@ namespace ProjectPRN.GUI
             this.btnEditClass.TabIndex = 15;
             this.btnEditClass.Text = "Edit";
             this.btnEditClass.UseVisualStyleBackColor = true;
+            this.btnEditClass.Click += new System.EventHandler(this.btnEditClass_Click);
             // 
-            // AddClass
+            // btnAddClass
             // 
-            this.AddClass.Location = new System.Drawing.Point(931, 420);
-            this.AddClass.Name = "AddClass";
-            this.AddClass.Size = new System.Drawing.Size(94, 29);
-            this.AddClass.TabIndex = 14;
-            this.AddClass.Text = "Add";
-            this.AddClass.UseVisualStyleBackColor = true;
+            this.btnAddClass.Location = new System.Drawing.Point(931, 420);
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.Size = new System.Drawing.Size(94, 29);
+            this.btnAddClass.TabIndex = 14;
+            this.btnAddClass.Text = "Add";
+            this.btnAddClass.UseVisualStyleBackColor = true;
+            this.btnAddClass.Click += new System.EventHandler(this.AddClass_Click);
             // 
             // Majors_ClassGUI
             // 
@@ -217,7 +220,7 @@ namespace ProjectPRN.GUI
             this.ClientSize = new System.Drawing.Size(1132, 621);
             this.Controls.Add(this.btnDeleteClass);
             this.Controls.Add(this.btnEditClass);
-            this.Controls.Add(this.AddClass);
+            this.Controls.Add(this.btnAddClass);
             this.Controls.Add(this.btnDeleteMajors);
             this.Controls.Add(this.btnEditMajors);
             this.Controls.Add(this.btnAddMajors);
@@ -260,6 +263,6 @@ namespace ProjectPRN.GUI
         private System.Windows.Forms.Button btnDeleteMajors;
         private System.Windows.Forms.Button btnDeleteClass;
         private System.Windows.Forms.Button btnEditClass;
-        private System.Windows.Forms.Button AddClass;
+        private System.Windows.Forms.Button btnAddClass;
     }
 }

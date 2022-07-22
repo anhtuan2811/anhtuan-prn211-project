@@ -141,6 +141,7 @@ namespace ProjectPRN.GUI
             this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
             this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.subjectsToolStripMenuItem.Text = "Subjects";
+            this.subjectsToolStripMenuItem.Click += new System.EventHandler(this.subjectsToolStripMenuItem_Click);
             // 
             // exercisesToolStripMenuItem
             // 

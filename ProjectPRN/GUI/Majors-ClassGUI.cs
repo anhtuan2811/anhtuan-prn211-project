@@ -221,6 +221,123 @@ namespace ProjectPRN.GUI
                 }
             }
         }
+
+        private void AddClass_Click(object sender, EventArgs e)
+        {
+            if (btnAddClass.Text == "Add")
+            {
+                txtClassID.Enabled = true;
+                txtClassName.Enabled = true;
+                btnAddClass.Text = "Save";
+                btnEditClass.Enabled = false;
+                btnDeleteClass.Enabled = false;
+                txtClassID.Text = "";
+                txtClassName.Text = "";
+            }
+            else
+            {
+                Class c = new Class
+                {
+                    ClassID = txtClassID.Text,
+                    MajorsID = txtMajorsID.Text,
+                    ClassName = txtClassName.Text
+                    
+                };
+                ClassDAO.Insert(c);
+                txtClassID.Enabled = false;
+                txtClassName.Enabled = false;
+                btnAddClass.Text = "Add";
+                btnEditClass.Enabled = true;
+                btnDeleteClass.Enabled = true;
+
+                string majorsid = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                DataTable dt2 = DAO.GetDataBySql("select ClassID, ClassName from class where MajorsID = '" + majorsid + "'", null);
+                dataGridView2.DataSource = dt2;
+                if (dataGridView2.Rows.Count > 0)
+                {
+                    dataGridView2.Rows[0].Selected = true;
+                    txtClassID.Text = dataGridView2.Rows[0].Cells[0].Value.ToString();
+                    txtClassName.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
+                }
+                else
+                {
+                    txtClassID.Text = "";
+                    txtClassName.Text = "";
+                }
+
+            }
+        }
+
+        private void btnEditClass_Click(object sender, EventArgs e)
+        {
+            if (btnEditClass.Text == "Edit")
+            {
+                txtClassName.Enabled = true;
+                btnEditClass.Text = "Save";
+                btnAddClass.Enabled = false;
+                btnDeleteClass.Enabled = false;
+            }
+            else
+            {
+                Class c = new Class
+                {
+                    ClassID = txtClassID.Text,
+                    ClassName = txtClassName.Text
+                };
+                ClassDAO.Update(c);
+                txtClassName.Enabled = false;
+                btnEditClass.Text = "Edit";
+                btnAddClass.Enabled = true;
+                btnDeleteClass.Enabled = true;
+                dataGridView1.Rows[index].Selected = true;
+                string majorsid = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                DataTable dt2 = DAO.GetDataBySql("select ClassID, ClassName from Class where MajorsID = '" + majorsid + "'",null);
+                dataGridView2.DataSource = dt2;
+                dataGridView2.Rows[index1].Selected = true;
+                txtMajorsID.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                txtMajorsName.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
+                if (dataGridView2.Rows.Count > 0)
+                {
+                    txtClassID.Text = dataGridView2.Rows[index1].Cells[0].Value.ToString();
+                    txtClassName.Text = dataGridView2.Rows[index1].Cells[1].Value.ToString();
+                }
+                else
+                {
+                    txtClassID.Text = "";
+                    txtClassName.Text = "";
+                }
+
+            }
+        }
+
+        private void btnDeleteClass_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to delete?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                string classID = txtClassID.Text;
+                Class c = ClassDAO.GetClasssByID(classID);
+                ClassDAO.Delete(c);
+                string majorsid = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                DataTable dt2 = DAO.GetDataBySql("select ClassID, ClassName from class where MajorsID = '" + majorsid + "'",null);
+                dataGridView2.DataSource = dt2;
+
+                if (dataGridView2.Rows.Count > 0)
+                {
+                    txtClassID.Text = dataGridView2.Rows[0].Cells[0].Value.ToString();
+                    txtClassName.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
+                }
+                else
+                {
+                    txtClassID.Text = "";
+                    txtClassName.Text = "";
+                }
+            }
+        }
     }
 }
 
