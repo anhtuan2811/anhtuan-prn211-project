@@ -76,3 +76,4 @@ C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.SearchStudentGUI.resources
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.StudentGUI.resources
 C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.TeacherGUI.resources
+C:\Users\ASUS\Desktop\Project PRN\ProjectPRN\obj\Debug\net5.0-windows\ProjectPRN.GUI.Majors_ClassGUI.resources

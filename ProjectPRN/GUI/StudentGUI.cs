@@ -147,9 +147,17 @@ namespace ProjectPRN.GUI
             }
             else
             {
-                StudentDAO.Delete(s);
-                DataTable dt = StudentDAO.GetStudentByClassID(cboClass.SelectedValue.ToString());
-                dataGridView1.DataSource = dt;
+                DialogResult dr = MessageBox.Show("Do you want to delete?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    StudentDAO.Delete(s);
+                    DataTable dt = StudentDAO.GetStudentByClassID(cboClass.SelectedValue.ToString());
+                    dataGridView1.DataSource = dt;
+                }              
             }
         }
 

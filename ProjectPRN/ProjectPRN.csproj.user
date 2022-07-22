@@ -13,6 +13,9 @@
     <Compile Update="GUI\MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Majors-ClassGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\SearchStudentGUI.cs">
       <SubType>Form</SubType>
     </Compile>

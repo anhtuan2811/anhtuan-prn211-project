@@ -79,5 +79,11 @@ namespace ProjectPRN.GUI
             GUI.TeacherGUI tg = new GUI.TeacherGUI();
             embed(panel1, tg);
         }
+
+        private void majorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.Majors_ClassGUI mc = new Majors_ClassGUI();
+            embed(panel1, mc);
+        }
     }
 }

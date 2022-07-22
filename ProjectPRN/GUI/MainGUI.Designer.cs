@@ -134,6 +134,7 @@ namespace ProjectPRN.GUI
             this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
             this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.majorsToolStripMenuItem.Text = "Majors";
+            this.majorsToolStripMenuItem.Click += new System.EventHandler(this.majorsToolStripMenuItem_Click);
             // 
             // subjectsToolStripMenuItem
             // 
