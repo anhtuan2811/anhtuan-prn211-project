@@ -7,6 +7,9 @@
     <Compile Update="GUI\ChangePasswordGUI.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\ExerciseGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Majors-ClassGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MarksGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\SearchStudentGUI.cs">

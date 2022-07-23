@@ -29,6 +29,7 @@ namespace ProjectPRN.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGUI));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -118,36 +119,37 @@ namespace ProjectPRN.GUI
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.studentToolStripMenuItem.Text = "Student";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // teacherToolStripMenuItem
             // 
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
-            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.teacherToolStripMenuItem.Text = "Teacher";
             this.teacherToolStripMenuItem.Click += new System.EventHandler(this.teacherToolStripMenuItem_Click);
             // 
             // majorsToolStripMenuItem
             // 
             this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
-            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.majorsToolStripMenuItem.Text = "Majors";
             this.majorsToolStripMenuItem.Click += new System.EventHandler(this.majorsToolStripMenuItem_Click);
             // 
             // subjectsToolStripMenuItem
             // 
             this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
-            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.subjectsToolStripMenuItem.Text = "Subjects";
             this.subjectsToolStripMenuItem.Click += new System.EventHandler(this.subjectsToolStripMenuItem_Click);
             // 
             // exercisesToolStripMenuItem
             // 
             this.exercisesToolStripMenuItem.Name = "exercisesToolStripMenuItem";
-            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.exercisesToolStripMenuItem.Text = "Exercises";
+            this.exercisesToolStripMenuItem.Click += new System.EventHandler(this.exercisesToolStripMenuItem_Click);
             // 
             // markToolStripMenuItem
             // 
@@ -163,6 +165,7 @@ namespace ProjectPRN.GUI
             this.studentMarksToolStripMenuItem.Name = "studentMarksToolStripMenuItem";
             this.studentMarksToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.studentMarksToolStripMenuItem.Text = "Student\'s mark";
+            this.studentMarksToolStripMenuItem.Click += new System.EventHandler(this.studentMarksToolStripMenuItem_Click);
             // 
             // viewStudentToolStripMenuItem
             // 
@@ -179,6 +182,7 @@ namespace ProjectPRN.GUI
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1150, 668);

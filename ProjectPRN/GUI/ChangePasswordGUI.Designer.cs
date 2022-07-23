@@ -87,6 +87,7 @@ namespace ProjectPRN.GUI
             // 
             // txtUserName
             // 
+            this.txtUserName.Enabled = false;
             this.txtUserName.Location = new System.Drawing.Point(223, 62);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(264, 27);

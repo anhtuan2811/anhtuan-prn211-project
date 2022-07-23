@@ -91,5 +91,17 @@ namespace ProjectPRN.GUI
             GUI.SubjectGUI sg = new SubjectGUI();
             embed(panel1, sg);
         }
+
+        private void exercisesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.ExerciseGUI exg = new ExerciseGUI();
+            embed(panel1, exg);
+        }
+
+        private void studentMarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.MarksGUI mg = new MarksGUI();
+            embed(panel1, mg);
+        }
     }
 }
